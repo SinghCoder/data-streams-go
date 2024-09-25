@@ -104,7 +104,6 @@ func newConfig(opts ...StartOption) *config {
 			c.service = filepath.Base(os.Args[0])
 		}
 	}
-	fmt.Println("INFO: agent addr is", c.agentAddr)
 	c.features = loadAgentFeatures(c.httpClient, c.agentAddr)
 	if c.statsd == nil {
 		// configure statsd client
